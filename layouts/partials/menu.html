@@ -1,0 +1,30 @@
+{{ $currentPath := .UrlPath.Url }}
+{{ $baseUrl := .Site.BaseUrl }}
+<div id="navwrapper">
+    <div id="masthead" class="navbar navbar-static-top oxy-mega-menu navbar-sticky swatch-white underline" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{{ $baseUrl }}" class="navbar-brand" style="background-image: url('/images/icons/apple-touch-icon-72-precomposed.png');  background-repeat: no-repeat; display:inline; float: left; padding-left: 80px; ">Chien Calme</a>
+            </div>
+
+            <nav class="collapse navbar-collapse main-navbar" role="navigation" >
+
+                <div class="menu-main-menu-container">
+                    <ul id="menu-main-menu" class="nav navbar-nav navbar-right">
+                        <li class='{{ if eq $currentPath "/" }} current-menu-ancestor {{ end }}'><a href="/" class="">Accueil</a></li>
+						{{ range .Site.Menus.main }}
+						 <li class=''><a href="{{ .Url }}">{{ .Name }}</a> </li>
+						{{ end }}
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+</div>
+

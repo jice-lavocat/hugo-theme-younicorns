@@ -1,0 +1,52 @@
+{{ $collection := .Params.collection}}
+{{ $categories := .Params.categories}}
+<article id="page" class="page">
+	<h1>{{ .Title}}</h1>
+
+    <div id="share_fb"><div class="fb-like" data-href="{{.Url}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style=""></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
+
+
+    <div class="page-content">
+        <div class="page_detail">
+            {{ if .Params.categories }}
+            <small class="post-date">Ecrit le <script>document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));</script></small>
+            {{ end }}
+
+            {{ if not .Params.noread }}
+            <span class="post-reading-time" style="padding-bottom: 10px;">(<i class="fa fa-clock-o"></i> <em>{{.ReadingTime}} min. de lecture</em>)</span>
+            {{ end }}
+        </div>
+        {{ .Content }}
+    </div>
+
+    <div id="share_fb"><div class="fb-like" data-href="{{.Url}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style="" ></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
+
+    {{ if .Params.collection }}
+    <div id="recent-posts-3" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Articles associés</h3>
+        {{ range $key, $value := .Site.Taxonomies.categories }}
+        {{ if eq $key $collection }}
+        <ul>
+            {{ range $value.Pages }}
+            <li class="clearfix">
+                <div class="post-icon"  style="background: #fff;">
+                    <a href="{{.Permalink}}" title="{{ .Title }}"><img style="width:100%;" src="{{ .Params.thumbnail }}" alt="{{ .Description }}"></a>
+                </div>
+                <a href="{{.Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
+                <small class="post-date">
+                    <script>
+								document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));
+							</script>
+                </small>
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+	</div>
+    {{ end }}
+</article>
+
+<script src="https://apis.google.com/js/plusone.js">
+</script>
+
+<div class="fb-comments" data-href="{{.Permalink}}" data-numposts="8" data-colorscheme="light"></div>

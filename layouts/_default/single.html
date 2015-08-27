@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+<body>
+	{{ partial "headingbar.html" . }}
+	
+	<!-- Menu -->
+    {{ partial "menu.html" .}} <!--',  {current_page:@document.url}) %>-->
+	
+			<!-- Content -->
+		<div class="container">
+			<!-- Content -->
+			<section id="content" class="section swatch-white" class="content">
+				<div class="row element-normal-top element-normal-bottom">
+					<div class="col-md-9">{{partial "article.html" .}}</div>
+					<div class="col-md-3 sidebar">{{ partial "sidebar.html" .}}</div>
+				</div>
+
+			</section>
+		</div><!-- /container -->
+		
+		<!-- Footer -->
+        {{ partial "footer.html" .}}
+	{{ partial "modals.html" . }}
+  {{ partial "bodyend.html" . }}
+</body>
+</html>

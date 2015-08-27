@@ -1,0 +1,65 @@
+﻿{{ partial "doctype.html" . }}
+<head>
+  <title>
+
+    {{ $title := (.Title | title ) }}
+    {{ $siteTitle := (.Site.Title) }}
+    {{ if eq $siteTitle $title }} {{$title}} - {{.Site.Params.title}} {{else}} {{ $title }} // {{ .Site.Title }}  {{ end }}
+
+
+  </title>
+  {{ partial "meta.html" . }}
+
+  {{ partial "og.html" . }}
+
+  <!-- CSS -->
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <!--<![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/vendor/bootstrap.3.3.2.css">
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/style.css">
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/theme.css">
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/vendor/font-awesome.min.css">
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Icons -->
+  	<!-- Icons -->
+		<link rel="shortcut icon" href="/images/icons/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="images/icons/apple-touch-icon-57-precomposed.png">
+
+  <!-- RSS -->
+  <!-- <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> -->
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <!-- Syntax highlighting -->
+  <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/tomorrow-night-bright.min.css">
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad(); </script>
+  {{ if .Params.lightbox }}
+
+
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/lightbox.css">
+  <script src="{{ .Site.BaseUrl }}/js/lightbox.min.js"></script>
+  {{ end }}
+	<script src="{{ .Site.BaseUrl }}/js/moment.min.js">	</script>
+	<script>moment.locale('fr', {
+    months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
+	monthsShort : "Janv._Févr._Mars_Avr._Mai_Juin_Juil._Août_Sept._Oct._Nov._Déc.".split("_"),
+});</script>
+  {{ if .Site.Params.categoriescss }}
+    <link rel="stylesheet" type="text/css" href="{{ .Site.Params.categoriescss }}">
+  {{ end }}
+
+  {{ partial "headend.html" . }}
+</head>

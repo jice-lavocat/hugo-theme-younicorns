@@ -1,0 +1,39 @@
+﻿<style>
+
+	#banner_newsletter img{
+	padding: 5px;
+	}
+	#banner_newsletter img:hover{
+	padding: 0px;
+	border: 5px solid #B32F13;
+	}
+</style>
+
+<a href="#" data-toggle="modal" data-target="#modalNewsletter" id="banner_newsletter" style="padding-bottom: 60px;"><img src="/images/banner_newsletter_1.png" />&nbsp;</a>
+
+<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Articles récents</h3>
+        <ul>
+		
+		{{ range first 5 (where .Site.Recent "Section" "actualites")}}
+					<li class="clearfix">
+						<div class="post-icon" style="background: #fff;">
+							<a href="{{.Permalink}}"  title="{{ .Title }}"><img  src="{{ .Params.thumbnail }}" alt="{{ .Title }}"></a>
+						</div>
+						<a href="{{.Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
+						<small class="post-date">
+							<script>
+								document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY')); 
+							</script>
+						</small>
+					</li>
+				{{ end }}
+        </ul>
+
+        <p style="text-align:right">Lire  <a href=" /actualites/">tous les articles</a> </p>
+
+        <center style="margin-top:15px"><div class="fb-like-box" data-href="https://www.facebook.com/ChienCalme" data-width="200" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div></center>
+
+
+
+</div>
+

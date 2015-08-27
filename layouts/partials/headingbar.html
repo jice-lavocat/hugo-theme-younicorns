@@ -1,0 +1,33 @@
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TK8WPN"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TK8WPN');</script>
+<!-- End Google Tag Manager -->
+<div class="top-bar swatch-gray">
+    <div class="container">
+        <div class="top top-left">
+            <div id="swatch_social-2" class="sidebar-widget text-left small-screen-center widget_swatch_social">
+				<ul class="unstyled inline social-icons social-simple social-normal">
+					{{ range .Site.Menus.social }}
+					    {{ if .Url }}<li><a href="{{ .Url }}" target="_blank">{{ .Pre }}</a></li>{{ end }}
+                    {{ end }}
+                    <li><a href="/index.xml"><i class="fa fa-rss"></i></a></li>
+
+				</ul>
+			</div>        
+		</div>
+        <div class="top top-right">
+            <div id="text-2" class="sidebar-widget text-right small-screen-center widget_text">
+                <a href="#" id="barking_dog_newsletter"  data-toggle="modal" data-target="#modalNewsletter">
+                <span class="icon-barking_dog_icon" style="font-size:20px; color: #922;"></span>
+                Déjà <span id="nombres_chien_calmes">2473</span> chiens calmés
+                <span class="icon-barking_dog_icon" style="font-size:20px; color: #922;"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
