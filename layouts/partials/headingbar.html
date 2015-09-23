@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div id="swatch_social-2" class="sidebar-widget text-left small-screen-center widget_swatch_social">
 				<ul class="unstyled inline social-icons social-simple social-normal">
 					{{ range .Site.Menus.social }}
-					    {{ if .Url }}<li><a href="{{ .Url }}" target="_blank">{{ .Pre }}</a></li>{{ end }}
+					    {{ if .URL }}<li><a href="{{ .URL }}" target="_blank">{{ .Pre }}</a></li>{{ end }}
                     {{ end }}
                     <li><a href="/index.xml"><i class="fa fa-rss"></i></a></li>
 

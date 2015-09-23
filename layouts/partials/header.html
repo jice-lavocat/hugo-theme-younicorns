@@ -22,10 +22,10 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/vendor/bootstrap.3.3.2.css">
-  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/style.css">
-  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/theme.css">
-  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/vendor/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vendor/bootstrap.3.3.2.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vendor/font-awesome.min.css">
   
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
@@ -49,10 +49,10 @@
   {{ if .Params.lightbox }}
 
 
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseUrl }}/css/lightbox.css">
-  <script src="{{ .Site.BaseUrl }}/js/lightbox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/lightbox.css">
+  <script src="{{ .Site.BaseURL }}/js/lightbox.min.js"></script>
   {{ end }}
-	<script src="{{ .Site.BaseUrl }}/js/moment.min.js">	</script>
+	<script src="{{ .Site.BaseURL }}/js/moment.min.js">	</script>
 	<script>moment.locale('fr', {
     months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
 	monthsShort : "Janv._Févr._Mars_Avr._Mai_Juin_Juil._Août_Sept._Oct._Nov._Déc.".split("_"),

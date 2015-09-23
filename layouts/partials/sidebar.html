@@ -14,7 +14,7 @@
 <div id="recent-posts-3" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Articles récents</h3>
         <ul>
 		
-		{{ range first 5 (where .Site.Recent "Section" "actualites")}}
+		{{ range first 5 (where .Site.Pages "Section" "actualites")}}
 					<li class="clearfix">
 						<div class="post-icon" style="background: #fff;">
 							<a href="{{.Permalink}}"  title="{{ .Title }}"><img  src="{{ .Params.thumbnail }}" alt="{{ .Title }}"></a>

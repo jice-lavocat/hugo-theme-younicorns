@@ -3,7 +3,7 @@
 	{{ partial "headingbar.html" . }}
 	
 	<!-- Menu -->
-    {{ partial "menu.html" .}} <!--',  {current_page:@document.url}) %>-->
+    {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
 	
 		<!-- Content -->
 		<div class="container">
@@ -68,7 +68,7 @@
 									 <div class="fb-like" data-href="{{ .Permalink }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">&nbsp;</div>
 
 									 <div>
-										 <a href="//www.pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{.Site.BaseUrl}}{{ .Params.thumbnail }}&description={{ .Title }} : {{ .Permalink }}" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+										 <a href="//www.pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{.Site.BaseURL}}{{ .Params.thumbnail }}&description={{ .Title }} : {{ .Permalink }}" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
 									 </div>
 
 								 </div>

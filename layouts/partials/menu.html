@@ -1,5 +1,5 @@
-{{ $currentPath := .UrlPath.Url }}
-{{ $baseUrl := .Site.BaseUrl }}
+{{ $currentPath := .URLPath.URL }}
+{{ $baseUrl := .Site.BaseURL }}
 <div id="navwrapper">
     <div id="masthead" class="navbar navbar-static-top oxy-mega-menu navbar-sticky swatch-white underline" role="banner">
         <div class="container">
@@ -18,7 +18,7 @@
                     <ul id="menu-main-menu" class="nav navbar-nav navbar-right">
                         <li class='{{ if eq $currentPath "/" }} current-menu-ancestor {{ end }}'><a href="/" class="">Accueil</a></li>
 						{{ range .Site.Menus.main }}
-						 <li class=''><a href="{{ .Url }}">{{ .Name }}</a> </li>
+						 <li class=''><a href="{{ .URL }}">{{ .Name }}</a> </li>
 						{{ end }}
                     </ul>
                 </div>
