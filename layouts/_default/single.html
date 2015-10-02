@@ -5,18 +5,37 @@
 	<!-- Menu -->
     {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
 	
-			<!-- Content -->
+	<section class="innercontent">
+		<!-- Content -->
 		<div class="container">
 			<!-- Content -->
-			<section id="content" class="section swatch-white" class="content">
-				<div class="row element-normal-top element-normal-bottom">
-					<div class="col-md-9">{{partial "article.html" .}}</div>
-					<div class="col-md-3 sidebar">{{ partial "sidebar.html" .}}</div>
-				</div>
+			<h2 class="heading">Single Post</h2>
 
-			</section>
-		</div><!-- /container -->
-		
+			<div class="row">
+
+	            <div class="col-md-8 col-lg-8">
+
+	                <article class="post">
+
+	                	{{partial "article.html" .}}
+
+	                </article>
+
+	            	<div class="clearfix"></div>
+
+	            </div>
+
+          		<aside class="col-md-4 col-lg-4">
+          			{{ partial "sidebar.html" .}}
+          		</aside>
+
+           	</div>
+
+      	</div>
+
+    </section>
+
+
 		<!-- Footer -->
         {{ partial "footer.html" .}}
 	{{ partial "modals.html" . }}

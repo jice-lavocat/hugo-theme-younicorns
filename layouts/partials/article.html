@@ -1,27 +1,58 @@
 {{ $collection := .Params.collection}}
 {{ $categories := .Params.categories}}
-<article id="page" class="page">
-	<h1>{{ .Title}}</h1>
-
-    <div id="share_fb"><div class="fb-like" data-href="{{.URL}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style=""></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
 
 
-    <div class="page-content">
-        <div class="page_detail">
-            {{ if .Params.categories }}
-            <small class="post-date">Ecrit le <script>document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));</script></small>
-            {{ end }}
+<div class="post-type post-img">
+    <a href="#"><img src="{{.Params.thumbnail}}" class="img-responsive" alt="image post" /></a> 
+</div>
 
-            {{ if not .Params.noread }}
-            <span class="post-reading-time" style="padding-bottom: 10px;">(<i class="fa fa-clock-o"></i> <em>{{.ReadingTime}} min. de lecture</em>)</span>
-            {{ end }}
-        </div>
-        {{ .Content }}
-    </div>
+<div class="author-info">
+    <ul class="list-inline">
+        <li>
+            <div class="icon-box"><img src="{{ .Site.BaseURL }}/img/author_mg.png" class="img-responsive" alt="image post" /></div>
+            <div class="info">
+                <p>Ecrit par :</p>
+                <a href="author.html">MG Clouet</a>
+           </div>    
+        </li>
 
-    <div id="share_fb"><div class="fb-like" data-href="{{.URL}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style="" ></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
+        {{ if .Params.categories }}
+        <li>
+            <div class="icon-box"><i class="fa fa-calendar"></i></div>
+            <div class="info">
+            <p>Posté le :</p>
+                <strong><script>document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));</script></strong></div>
+        </li>
+        {{ end }}
 
-    {{ if .Params.collection }}
+        {{ if not .Params.noread }}
+         <li>
+             <div class="icon-box"><i class="fa fa-clock-o "></i></div>
+             <div class="info">
+             <p>Temps de lecture :</p>
+                 <strong>{{.ReadingTime}} min</strong></div>
+         </li>
+         {{ end }}
+
+         <li>
+            <div class="icon-box"><i class="fa fa-eye"></i></div>
+            <div class="info">
+            <p>Lectures :</p>
+                <strong>4289</strong></div>
+        </li>
+    </ul>
+</div>
+
+ <div class="caption">
+
+    <h3><a href="#">{{ .Title}}</a></h3>
+    <div id="share_fb" style="float: right"><div class="fb-like" data-href="{{.URL}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style=""></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
+    {{ .Content }}
+
+</div>
+
+
+{{ if .Params.collection }}
     <div id="recent-posts-3" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Articles associés</h3>
         {{ range $key, $value := .Site.Taxonomies.categories }}
         {{ if eq $key $collection }}
@@ -34,17 +65,21 @@
                 <a href="{{.Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
                 <small class="post-date">
                     <script>
-								document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));
-							</script>
+                                document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));
+                            </script>
                 </small>
             </li>
             {{ end }}
         </ul>
         {{ end }}
         {{ end }}
-	</div>
-    {{ end }}
-</article>
+    </div>
+{{ end }}
+
+
+
+
+
 
 <script src="https://apis.google.com/js/plusone.js">
 </script>

@@ -20,16 +20,14 @@
   <!--<![endif]-->
   <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+    <script src="{{ .Site.BaseURL }}/css/vendor/respond.min.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vendor/bootstrap.3.3.2.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vendor/bootstrap.3.3.4.min.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/theme.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/vendor/font-awesome.min.css">
   
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
   <!-- Icons -->
   	<!-- Icons -->
@@ -47,8 +45,6 @@
   <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad(); </script>
   {{ if .Params.lightbox }}
-
-
   <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/lightbox.css">
   <script src="{{ .Site.BaseURL }}/js/lightbox.min.js"></script>
   {{ end }}

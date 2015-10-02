@@ -1,30 +1,201 @@
 {{ $currentPath := .URLPath.URL }}
 {{ $baseUrl := .Site.BaseURL }}
-<div id="navwrapper">
-    <div id="masthead" class="navbar navbar-static-top oxy-mega-menu navbar-sticky swatch-white underline" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".main-navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="{{ $baseUrl }}" class="navbar-brand" style="background-image: url('/images/icons/apple-touch-icon-72-precomposed.png');  background-repeat: no-repeat; display:inline; float: left; padding-left: 80px; ">Chien Calme</a>
-            </div>
 
-            <nav class="collapse navbar-collapse main-navbar" role="navigation" >
 
-                <div class="menu-main-menu-container">
-                    <ul id="menu-main-menu" class="nav navbar-nav navbar-right">
+
+                   <!-- <ul id="menu-main-menu" class="nav navbar-nav navbar-right">
                         <li class='{{ if eq $currentPath "/" }} current-menu-ancestor {{ end }}'><a href="/" class="">Accueil</a></li>
 						{{ range .Site.Menus.main }}
 						 <li class=''><a href="{{ .URL }}">{{ .Name }}</a> </li>
 						{{ end }}
-                    </ul>
+                    </ul> -->
+
+
+
+
+<header>
+
+<!-- Fixed navbar -->
+
+<nav class="navbar main-menu navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+              <span class="sr-only">Toggle navigation</span>
+
+              <span class="icon-bar"></span>
+
+              <span class="icon-bar"></span>
+
+              <span class="icon-bar"></span>
+
+            </button>
+
+    <a class="navbar-brand"  href="{{ $baseUrl }}" title="Chien Calme"><img src="/images/icons/apple-touch-icon-72-precomposed.png" alt="Chien Calme Logo" /></a> </div>
+
+    <div class="navbar-collapse collapse pull-left">
+
+      <ul class="nav navbar-nav menu" id="menu">
+
+        <li><a href="about.php">Accueil</a></li>
+        <li><a href="about.php">Blog</a></li>
+
+
+        <li class="dropdown mega-dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources<span class="caret"></span></a>               
+
+                <div class="dropdown-menu">
+
+                    <div class="container">
+
+                    <div class="mega-dropdown-menu">
+
+                        <div class="col-md-4 col-xs-12 col-sm-6 sub-menu">
+
+                            <h3>Méthodes</h3>
+
+                            <ul class="list-unstyled">
+
+                              <li><a href="#">Massage </a></li>
+
+                                <li><a href="#">Ostéopathie </a></li>
+
+                                <li><a href="#">Hypnose </a></li>
+
+                                <li><a href="#">Comportement </a></li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-4 col-xs-12 col-sm-6 sub-menu">
+
+                            <h3>Activités</h3>
+
+                            <ul class="list-unstyled">
+
+                                <li><a href="#"><i class="fa fa-google-plus-square"></i> En intérieur </a></li>
+
+                                <li><a href="#"><i class="fa fa-twitter-square"></i> Dans l'eau </a></li>
+
+                                <li><a href="#"><i class="fa fa-pinterest-square"></i> A la montagne </a></li>
+
+                                <li><a href="#"><i class="fa fa-linkedin-square"></i> En ville </a></li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 sub-menu  hidden-xs">
+
+                            <h3>Produits</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet lectus congue mi viverra congue in sed leo.</p>
+
+                            <br/>
+
+                            <ul class="list-unstyled">
+
+                              <li><a href=""><i class="fa fa-android"></i> Google Play</a></li>
+
+                              <li><a href=""><i class="fa fa-apple"></i> Apple Store</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    </div>   
+
+                </div>              
+
+            </li>
+
+
+        <li><a href="about.php">A propos</a></li>
+        <li><a href="about.php">Contact</a></li>
+
+
+      </ul>
+
+    </div>
+
+    <ul class="nav navbar-nav navbar-right menu social-icons">
+
+        <li class="dropdown mega-dropdown search">
+
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search"></i></a>-->
+
+          <div class="dropdown-menu">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                        <div class="col-md-6 pull-right">
+
+                    <div class="mega-dropdown-menu">
+
+                        <form class="search-form" action="search.php">
+
+                            <div class="form-group">
+
+                        <div class="col-lg-12">
+
+                            <div class="input-group">
+
+                              <input type="text" class="form-control" placeholder="Search for...">
+
+                              <span class="input-group-btn">
+
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+
+                              </span>
+
+                            </div><!-- /input-group -->
+
+                          </div>
+
+                          </div>
+
+                      </form>
+
+                    </div>
+
+                    </div>
+
+                    </div>
+
+
+
+
+
+                    </div>   
+
                 </div>
 
-            </nav>
-        </div>
-    </div>
-</div>
+        </li>
 
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+
+        <li><a href="signin.php"><i class="fa fa-user"></i></a></li>
+
+      </ul>
+
+    <!--/.nav-collapse --> 
+
+  </div>
+
+</nav>
+
+</header>
