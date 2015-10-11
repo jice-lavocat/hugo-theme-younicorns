@@ -1,51 +1,8 @@
 {{ $collection := .Params.collection}}
 {{ $categories := .Params.categories}}
 
-{{.Layout}}
-{{.Params.tags}}
 
-{{ if eq .Params.layout "post" }}
-<div class="post-type post-img">
-    <a href="#"><img src="{{.Params.thumbnail}}" class="img-responsive" alt="image post" /></a> 
-</div>
-{{ end}}
 
-<div class="author-info">
-    <ul class="list-inline">
-        <li>
-            <div class="icon-box"><img src="{{ .Site.BaseURL }}/img/author_mg.png" class="img-responsive" alt="image post" /></div>
-            <div class="info">
-                <p>Ecrit par :</p>
-                <a href="author.html">MG Clouet</a>
-           </div>    
-        </li>
-
-        {{ if .Params.categories }}
-        <li>
-            <div class="icon-box"><i class="fa fa-calendar"></i></div>
-            <div class="info">
-            <p>Posté le :</p>
-                <strong><script>document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));</script></strong></div>
-        </li>
-        {{ end }}
-
-        {{ if not .Params.noread }}
-         <li>
-             <div class="icon-box"><i class="fa fa-clock-o "></i></div>
-             <div class="info">
-             <p>Temps de lecture :</p>
-                 <strong>{{.ReadingTime}} min</strong></div>
-         </li>
-         {{ end }}
-
-         <li>
-            <div class="icon-box"><i class="fa fa-eye"></i></div>
-            <div class="info">
-            <p>Lectures :</p>
-                <strong>4289</strong></div>
-        </li>
-    </ul>
-</div>
 
  <div class="caption">
 
