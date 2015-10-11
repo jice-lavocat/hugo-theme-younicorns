@@ -41,11 +41,10 @@
 
       <ul class="nav navbar-nav menu" id="menu">
 
-        <li><a href="about.php">Accueil</a></li>
-        <li><a href="about.php">Blog</a></li>
+        <li><a href="{{ $baseUrl }}">Actualités</a></li>
 
 
-        <li class="dropdown mega-dropdown">
+        <!--<li class="dropdown mega-dropdown">
 
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources<span class="caret"></span></a>               
 
@@ -116,10 +115,10 @@
                 </div>              
 
             </li>
+        -->
 
-
-        <li><a href="about.php">A propos</a></li>
-        <li><a href="about.php">Contact</a></li>
+        <li><a href="/a-propos/">A propos</a></li>
+        <li><a href="/contact/">Contact</a></li>
 
 
       </ul>
@@ -182,13 +181,24 @@
 
         </li>
 
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        {{ if .Site.Params.facebookPage }}
+        <li>
+          <a href="{{.Site.Params.facebookPage}}" target="_blank"><i class="fa fa-facebook"></i></a>
+        </li>
+        {{ end }}
 
-        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+        {{ if .Site.Params.twitterPage }}
+        <li>
+          <a href="{{.Site.Params.twitterPage}}" target="_blank"><i class="fa fa-twitter"></i></a>
+        </li>
+        {{ end }}
 
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        {{ if .Site.Params.googlePage }}
+        <li>
+          <a href="{{.Site.Params.googlePage}}" target="_blank"><i class="fa fa-google-plus"></i></a>
+        </li>
+        {{ end }}
 
-        <li><a href="signin.php"><i class="fa fa-user"></i></a></li>
 
       </ul>
 

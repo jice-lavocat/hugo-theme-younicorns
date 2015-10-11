@@ -38,11 +38,13 @@
 
             <div class="col-sm-5">
                 <ul class="list-inline footer-social">
+                    {{ if .Site.Params.facebookPage }}
                     <li>
                         <a class="facebook fa fa-facebook" href=
-                        "https://www.facebook.com/younicorns.xyz" style=
+                        "{{.Site.Params.facebookPage}}" style=
                         "font-style: italic" target="_blank"></a>
                     </li>
+                    {{ end}}
 
                     <li>
                         <a class="twitter fa fa-twitter" href=
