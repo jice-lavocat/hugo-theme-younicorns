@@ -5,81 +5,27 @@
 	<!-- Menu -->
     {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
 	
-		<!-- Content -->
-		<div class="container">
 			<!-- Content -->
-			<section id="content" class="section swatch-white" class="content">
-				<div class="row element-normal-top element-normal-bottom">
+			<section class="content">
+				<div class="container">
+
+					<p class="heading">Younicorns.xyz > Les dernières actualités</p>
 					
-					<div class="col-md-9"><h1>Les dernières actualités</h1>{{ range .Data.Pages }}
-							 <article  class="post">
-								<header class="post-header">
-								{{ if .Params.thumbnail }}
-								<div class="post-avatar-wrapper">
-								  <img class="post-avatar" alt="" src="{{ .Params.thumbnail }}" width="150px" style="float: left; padding-right: 20px;">
-								</div>
-								{{ end }}
-								<h1 class="post-title">
-								  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-								</h1>
-								</header>
-								<p class="post-meta">
-									{{ if not .Params.nodate }}
-									  <span class="post-date">
-										<span class="post-date-day">{{ .Date.Format "2" }}</span><span class="post-date-separator"> </span><span class="post-date-month">{{ .Date.Format "Jan" }}</span> <span class="post-date-year">{{ .Date.Format "2006" }}</span>
-									  </span>
-										{{ end }}
-										{{ if not .Params.noauthor }}
-											{{ if .Params.author }}By <a class="post-author" {{ if .Params.authorlink }}href="{{ .Params.authorlink }}"{{ end }}>{{ .Params.author }}</a>{{ end }}
-										{{ end }}
-								  {{ if not .Params.noread }}
-									<span class="post-reading-time">(<i class="fa fa-clock-o"></i> <em>{{.ReadingTime}} min. de lecture</em>)</span>
-								  {{ end }}
-										{{ if .Params.categories }}
-											<div class="post-categories">
-											{{ range .Params.categories }}
-												<a class="post-category post-category-{{ . | urlize }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
-											{{ end }}
-											</div>
-										{{ end }}
-								</p>
-								<div class="post-summary">
-									{{ .Summary }}
-								</div>
-								<div class="read-more-link">
-									<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Lire la suite... </a>
-								</div>
+					<div class="row">
 
-								 <style>
-									 .actualites_social_links {
-									 padding-top: 10px;
-									 }
-									 .actualites_social_links div{
-									 float: left;
-									 display: block;
-									 width: 120px;
-									 }
-								 </style>
-
-								 <div class="actualites_social_links">
-
-									 <div><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ .Permalink }}" data-via="chiencalme" data-related="chiencalme" data-text="{{ .Title }} : {{ .Permalink }}">Tweet</a></div>
-
-									 <div class="fb-like" data-href="{{ .Permalink }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false">&nbsp;</div>
-
-									 <div>
-										 <a href="//www.pinterest.com/pin/create/button/?url={{ .Permalink }}&media={{.Site.BaseURL}}{{ .Params.thumbnail }}&description={{ .Title }} : {{ .Permalink }}" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-									 </div>
-
-								 </div>
-							  </article>
-						  {{ end }}
-					  </div>
+	            		<div class="col-md-8 col-lg-8">
+						{{ partial "content_list.html" .}}
+						</div>
+					
+					
 					<div class="col-md-3 sidebar">{{ partial "sidebar.html" .}}</div>
-				</div>
+
+					{{ template "_internal/pagination.html" . }}
+
+
+				</div><!-- /container -->
 
 			</section>
-		</div><!-- /container -->
 	
 		<!-- Footer -->
         {{ partial "footer.html" .}}

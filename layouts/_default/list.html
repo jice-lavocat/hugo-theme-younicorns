@@ -8,7 +8,7 @@
       {{ partial "listtop.html" . }}
 
       <div class="posts">
-        {{ range .Data.Pages }}
+        {{ range .Paginator.Pages }}
           <section  class="post">
             <header class="post-header">
             {{ if .Params.thumbnail }}
@@ -43,11 +43,14 @@
             <article class="post-summary">
             	{{ .Summary }}
             </article>
-			<div class="read-more-link">
-				<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
-			</div>
+      			<div class="read-more-link">
+      				<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+      			</div>
           </section>
         {{ end }}
+
+        {{ template "_internal/pagination.html" . }}
+
       </div>
 
       {{ partial "footer.html" . }}
