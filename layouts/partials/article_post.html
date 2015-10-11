@@ -1,10 +1,8 @@
 {{ $collection := .Params.collection}}
 {{ $categories := .Params.categories}}
 
-{{.Layout}}
-{{.Params.tags}}
 
-{{ if eq .Params.layout "post" }}
+{{ if .Params.thumbnail }}
 <div class="post-type post-img">
     <a href="#"><img src="{{.Params.thumbnail}}" class="img-responsive" alt="image post" /></a> 
 </div>

@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+<body>
+	{{ partial "headingbar.html" . }}
+	
+	<!-- Menu -->
+    {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
+	
+	<section class="innercontent">
+		<!-- Content -->
+		<div class="container">
+			<!-- Content -->
+			<p class="heading">Actualités</p>
+
+			<div class="row">
+
+	            <div class="col-md-8 col-lg-8">
+
+	                <article class="post">
+
+	                	{{partial "article_post.html" .}}
+
+	                </article>
+
+	            	<div class="clearfix"></div>
+
+	            </div>
+
+          		<aside class="col-md-4 col-lg-4">
+          			{{ partial "sidebar.html" .}}
+          		</aside>
+
+           	</div>
+
+      	</div>
+
+    </section>
+
+
+		<!-- Footer -->
+        {{ partial "footer.html" .}}
+	{{ partial "modals.html" . }}
+  {{ partial "bodyend.html" . }}
+</body>
+</html>
