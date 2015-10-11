@@ -1,51 +1,81 @@
-<footer id="footer" role="contentinfo" style="background:#000;color:#fff;">
-    <section class="section swatch-black">
-        <div class="container">
-            <div class="row element-normal-top element-normal-bottom">
-                <div class="col-md-4"><div id="recent-posts-4" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Nos dernières actus</h3>            
-				<ul>
-				{{ range first 5 (where .Site.Pages "Section" "actualites")}}
-					<li class="clearfix">
-						<div class="post-icon"  style="background: #000;">
-							<a href="{{.Permalink}}" title="{{ .Title }}"><img style="width:100%;" src="{{ .Params.thumbnail }}" alt="{{ .Title }}"></a>
-						</div>
-						<a href="{{.Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
-						<small class="post-date">
-							<script>
-								document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY')); 
-							</script>
-						</small>
-					</li>
-				{{ end }}
-                </ul>
+<footer>
+    <div class="container">
+        <div class="row footer-top">
+            <div class="col-sm-4 footer-box">
+                <h4>A propos</h4>
 
-                </div></div>
-                <div class="col-md-4"><div id="categories-4" class="sidebar-widget  widget_categories"><h3 class="sidebar-header">Categories</h3>		<ul>
+                <div class="footer-box-text">
+                    <p>YounicornsXYZ est un site d'actualités sur le milieu des startups. Nous essayons de vous fournir une information neutre et instantanée.</p>
 
-                    <li class="cat-item cat-item-47"><a href="/pages/produits/">Les produits</a>
-                    </li>
-                    <li class="cat-item cat-item-54"><a href="/pages/massage/">Massage canin</a>
-                    </li>
-                    <li class="cat-item cat-item-54"><a href="/pages/osteopathie/">Ostéopathie </a>
-                    </li>
-                    <li class="cat-item cat-item-59"><a href="/pages/hypnose/" > Hypnose </a>
-                    </li>
-
-                </ul>
-                </div></div>
-                <div class="col-md-4">
-                    <div id="Mentions légales/ CGU -4" class="sidebar-widget  widget_archive">
-                        <h3 class="sidebar-header">A propos</h3>
-                        <ul>
-                            <li><a href="/mentions-legales/">Mentions légales</a></li>
-                            <li><a href="/partenaires/">Partenaires</a></li>
-                        </ul>
-                    </div>
+                    <p><a href="/apropos/">En savoir plus...</a></p>
+                    <p><a  href="/mentions-legales/">Mentions légales</a></p>
+                    <p><a  href="/redaction/">La rédaction</a></p>
                 </div>
-            </div> <!-- /. row -->
-        </div> <!-- /. container -->
-    </section>
+            </div>
+
+
+
+            <div class="col-sm-4 footer-box col-sm-offset-4">
+                <h4>Contact</h4>
+
+                <div class="footer-box-text">
+                    <p><span class="gray-text">Adresse:</span> @Numa : 39 rue du Caire, 75002 Paris, FRANCE</p>
+
+                    <p><span class="gray-text">Phone:</span> +336 46 37 49 26</p>
+
+                    <p><span class="gray-text">Twitter:</span> <a href="https://www.twitter.com/younicornsXYZ" target="_blank">@younicornsXYZ</a></p>
+
+                    <p><span class="gray-text">Email:</span> <a href=
+                    "">contact@younicorns.xyz</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+            <div class="col-sm-7 footer-copyright">
+                <p>© Blogdesk Bootstrap Template by <a href=
+                "http://www.mirchu.net">Mirchu</a>.</p>
+            </div>
+
+            <div class="col-sm-5">
+                <ul class="list-inline footer-social">
+                    <li>
+                        <a class="facebook fa fa-facebook" href=
+                        "https://www.facebook.com/mirchu.net" style=
+                        "font-style: italic" target="_blank"></a>
+                    </li>
+
+                    <li>
+                        <a class="twitter fa fa-twitter" href=
+                        "https://twitter.com/mirchu_net" style=
+                        "font-style: italic" target="_blank"></a>
+                    </li>
+
+                    <li>
+                        <a class="google-plus fa fa-google-plus" href=
+                        "https://plus.google.com/+MirchuNet" style=
+                        "font-style: italic" target="_blank"></a>
+                    </li>
+
+                    <li>
+                        <a class="behance fa fa-behance" href=
+                        "https://www.behance.net/waqashussain1989" style=
+                        "font-style: italic" target="_blank"></a>
+                    </li>
+
+                    <li>
+                        <a class="tumblr fa fa-tumblr" href=
+                        "http://mirchu-net.tumblr.com/" style=
+                        "font-style: italic" target="_blank"></a>
+                    </li>
+
+                    <li>
+                        <a class="pinterest fa fa-pinterest" href=
+                        "https://www.pinterest.com/waqashussain91/mirchu"
+                        style="font-style: italic" target="_blank"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
-
-
-
