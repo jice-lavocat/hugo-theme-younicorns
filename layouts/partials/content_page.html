@@ -7,7 +7,7 @@
  <div class="caption">
 
     <h1><a href="#">{{ .Title}}</a></h1>
-    <div id="share_fb" style="float: right"><div class="fb-like" data-href="{{.URL}}" data-width="500" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true" style=""></div><img src="/images/social/rsz_dog-facebook-like.jpg" /></div>
+    
     {{ .Content }}
 
 </div>
@@ -21,39 +21,6 @@
 </div>
 
 
-<div class="share-this">
-    <div class="row">
-        <div class="col-xs-5 col-sm-4 col-md-5 col-lg-4"><p>Partagez ce billet sur :</p></div>
-            <div class="col-xs-7 col-sm-8 col-md-7 col-lg-8 nopadding">
-                <ul class="list-inline">                  
-                      <li><a href="https://plus.google.com/share?url={{.Permalink}}" target="_blank" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                      <li><a href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="https://twitter.com/home?status={{.Title}} - {{.Permalink}} via @younicornsXYZ" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-            </div>
-        </div>
-</div>
-
-
-<div class="comment-count">
-    <h4  class="disqus-comment-count" data-disqus-url="{{.Permalink}}">&nbsp;</h4>
-</div>
-
-<div class="comment-list">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'younicornsxyz';
-        
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
 
 
 {{ if .Params.collection }}
