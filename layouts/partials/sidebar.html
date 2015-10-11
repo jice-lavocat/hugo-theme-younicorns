@@ -24,7 +24,7 @@
         </div>
 
         <div class="media-body">
-          <h4 class="media-heading"><a href="#">{{ .Title }}</a></h4>
+          <h4 class="media-heading"><a href="{{.Permalink}}">{{ .Title }}</a></h4>
 
           <p><script>document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY')); </script></p>
         </div>
