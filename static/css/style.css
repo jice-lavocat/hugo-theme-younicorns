@@ -92,7 +92,7 @@ textarea.form-control {height: auto;min-height: 200px;}
 .back-to-top:hover { background:#363636; color:#fff; }
 /******************section default**********************/
 
-section h2.heading { font-size:30px; color:#3b4952; font-family: 'Roboto', sans-serif; font-weight:300; line-height:30px; margin-bottom:45px; border-bottom: 5px solid #e74c3c; margin-top: 0px; padding-bottom: 15px;}
+section p.heading , section h2.heading { font-size:30px; color:#3b4952; font-family: 'Roboto', sans-serif; font-weight:300; line-height:30px; margin-bottom:45px; border-bottom: 5px solid #e74c3c; margin-top: 0px; padding-bottom: 15px;}
 section h3.helping-text { font-size:20px; color:#454545; font-weight:300; margin:0px 0px 30px 0px; line-height:36px; }
 section p { font-size:18px; color:#454545; }
 section { padding:0px 0px; }
@@ -249,7 +249,7 @@ margin: 0px; background: transparent; font-size: 50px; display: block;}
 .post .post-img a img { -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; width: 100%; height: auto; border-radius: 3px 3px 0px 0px; }
 .post-detail .post .caption { padding:55px 45px 0px 45px; }
 .post .caption { float: left; width: 100%; text-align: left; padding:25px 25px; }
-.post .caption h3 { margin: 0px 0px 20px 0px; color: #36a0e7; font-weight: 300; font-size: 34px; line-height: 42px; }
+.post .caption h1 { margin: 0px 0px 20px 0px; color: #36a0e7; font-weight: 300; font-size: 34px; line-height: 42px; }
 .post .caption p { line-height: 28px; margin-bottom: 20px; font-size: 16px; }
 .post .author-info { padding: 15px 15px 15px 15px; text-align: left; min-height: 60px; border-bottom: 1px solid #ddd; background: #fcfcfc; float: left; width: 100%; }
 .post .author-info .list-inline { margin: 0px; }
