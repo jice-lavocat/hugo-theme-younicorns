@@ -1,10 +1,13 @@
 {{ $collection := .Params.collection}}
 {{ $categories := .Params.categories}}
-{{ $author := .Params.authoralias}}
-
-Joce
+{{ $author := .Params.author}}
 
 
+{{ range where .Site.Pages "Section" "auteurs"}}
+    {{ if eq $author .Params.author }}
+      {{ .Render "author"}}
+    {{ end }}
+{{ end }}
 
 {{ if .Params.thumbnail }}
 <div class="post-type post-img">
