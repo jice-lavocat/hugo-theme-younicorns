@@ -17,6 +17,16 @@
 
 	                <article class="post">
 
+{{ range where .Site.Pages "Section" "auteurs"}}
+  -----.
+  {{ .Render "author"}}
+  
+{{ end }}
+
+
+
+
+
 	                	{{partial "content_post.html" .}}
 
 	                </article>
