@@ -3,12 +3,6 @@
 {{ $author := .Params.author}}
 
 
-{{ range where .Site.Pages "Section" "auteurs"}}
-    {{ if eq $author .Params.author }}
-      {{ .Render "author"}}
-    {{ end }}
-{{ end }}
-
 {{ if .Params.thumbnail }}
 <div class="post-type post-img">
     <a href="#"><img src="{{.Params.thumbnail}}" class="img-responsive" alt="image post" /></a> 
@@ -17,13 +11,13 @@
 
 <div class="author-info">
     <ul class="list-inline">
-        <li>
-            <div class="icon-box"><img src="{{ .Site.BaseURL }}/img/author_mg.png" class="img-responsive" alt="image post" /></div>
-            <div class="info">
-                <p>Ecrit par :</p>
-                <a href="author.html">MG Clouet</a>
-           </div>    
-        </li>
+        {{ range where .Site.Pages "Section" "auteurs"}}
+            {{ if eq $author .Params.author }}
+                <li class="author">
+                    {{ .Render "author"}}
+                </li>
+            {{ end }}
+        {{ end }}
 
         {{ if .Params.categories }}
         <li>
@@ -38,7 +32,7 @@
          <li>
              <div class="icon-box"><i class="fa fa-clock-o "></i></div>
              <div class="info">
-             <p>Temps de lecture :</p>
+             <p>Lecture en :</p>
                  <strong>{{.ReadingTime}} min</strong></div>
          </li>
          {{ end }}
@@ -46,7 +40,7 @@
          <li>
             <div class="icon-box"><i class="fa fa-eye"></i></div>
             <div class="info">
-            <p>Lectures :</p>
+            <p>Vus :</p>
                 <strong>4289</strong></div>
         </li>
     </ul>

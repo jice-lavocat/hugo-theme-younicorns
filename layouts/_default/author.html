@@ -1,2 +1,5 @@
-:)
-Fiche descriptive de l'auteur : {{.Params.author}}
+<div class="icon-box"><img src="{{ .Site.BaseURL }}{{.Params.authorimage}}" class="img-responsive" alt="Auteur: {{.Params.authorname}}" /></div>
+<div class="info">
+    <p>Ecrit par :</p>
+    <a href="author.html">{{.Params.authorname}}</a>
+</div>

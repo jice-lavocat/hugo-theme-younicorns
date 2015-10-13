@@ -254,7 +254,8 @@ margin: 0px; background: transparent; font-size: 50px; display: block;}
 .post .author-info { padding: 15px 15px 15px 15px; text-align: left; min-height: 60px; border-bottom: 1px solid #ddd; background: #fcfcfc; float: left; width: 100%; }
 .post .author-info .list-inline { margin: 0px; }
 .post .author-info ul li:first-child { border-left: none; padding-left: 0px; }
-.post .author-info ul li { float: left; border-left: 1px solid #ddd; padding-left: 20px; padding-right: 20px; }
+.post .author-info ul li { float: left; border-left: 1px solid #ddd; padding-left: 20px; padding-right: 20px; max-width: 25%;}
+.post .author-info ul li.author { max-width: none; min-width: 25%;}
 .post .author-info ul li p {line-height: 16px; color: #3b4952; font-weight: 300; font-size: 14px; margin: 0px; }
 .post .author-info ul li strong{color: #3b4952;}
 .post .author-info ul li a { color: #3b4952; font-weight: 700; font-size: 16px;line-height: 20px; }
