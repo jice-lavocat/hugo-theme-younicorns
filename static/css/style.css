@@ -266,7 +266,7 @@ margin: 0px; background: transparent; font-size: 50px; display: block;}
 
 .post .author-info.author-info-2 ul li:first-child { border-left: none; padding-left: 0px; }
 .post .author-info.author-info-2 ul li .icon-box { font-size: 28px;}
-
+.post .author_social  { font-size: 20px;}
 
 .post .post-category { float: left; width: 100%; text-align: left; margin-bottom: 20px; }
 .post .post-category a { margin: 0px; font-size: 18px; font-weight: 300; color: #3b4952; }
