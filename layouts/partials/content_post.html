@@ -14,7 +14,7 @@
         {{ range where .Site.Pages "Section" "auteurs"}}
             {{ if eq $author .Params.author }}
                 <li class="author">
-                    {{ .Render "author"}}
+                    {{ .Render "summary"}}
                 </li>
             {{ end }}
         {{ end }}
