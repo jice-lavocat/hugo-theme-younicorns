@@ -1,0 +1,35 @@
+<article class="post vt-post">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+            <div class="post-type post-img">
+                <a href="#"><img alt="image post" class="img-responsive" src=
+                "{{ .Params.thumbnail }}"></a>
+            </div>
+
+            <div class="author-info author-info-2">
+                <ul class="list-inline"  style="width:400px">
+                    <li  style="width:50%">
+                        <div class="info">
+                            <p><i class="fa fa-calendar"></i> Posté le:</p><strong>{{ .Date.Format "2" }} {{ .Date.Format "Jan" }} {{ .Date.Format "2006" }}</strong>
+                        </div>
+                    </li>
+
+                    <li  style="width:50%">
+                        <div class="info" >
+                            <p><i class="fa fa-clock-o "></i> Lecture:</p><strong>{{.ReadingTime}} minutes</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8" >
+            <div class="caption">
+                <h3 class="md-heading"  style="margin-top: -10px;"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+
+                <p>{{ .Summary }}</p><a class="btn btn-default" href=
+                "{{ .Permalink }}">Lire la suite</a>
+            </div>
+        </div>
+    </div>
+</article>
