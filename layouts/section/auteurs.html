@@ -1,0 +1,49 @@
+{{ partial "header.html" . }}
+<body>
+	{{ partial "headingbar.html" . }}
+	
+	<!-- Menu -->
+    {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
+	
+			<!-- Content -->
+			<section class="content">
+				<div class="container">
+
+					<p class="heading">Younicorns.xyz > Les auteurs</p>
+					
+					<div class="row">
+
+	            		<div class="col-md-8 col-lg-8">
+							 
+							<h1>Les auteurs de Younicorns.xyz</h1>
+
+						{{ range .Paginator.Pages }}
+						    <article class="post">
+						    	{{ .Render "list"}}
+						    </article>
+						{{ end }}
+
+						</div>
+					
+					
+					<div class="col-md-3 sidebar">{{ partial "sidebar.html" .}}</div>
+
+					{{ template "_internal/pagination.html" . }}
+
+
+				</div><!-- /container -->
+
+			</section>
+	
+		<!-- Footer -->
+        {{ partial "footer.html" .}}
+		
+		
+    {{ partial "bodyend.html" . }}
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+	<!-- Please call pinit.js only once per page -->
+	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+</body>
+</html>
