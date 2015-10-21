@@ -5,10 +5,14 @@
                 <h4>A propos</h4>
 
                 <div class="footer-box-text">
+                    {{ if .Site.Params.descriptionFooter }}
+                    <p>{{.Site.Params.descriptionFooter}}</p>
+                    {{ else }}
                     <p>YounicornsXYZ est un site d'actualités sur le milieu des startups. Nous essayons de vous fournir une information neutre et instantanée.</p>
+                    {{ end }}
 
                     <p><a  href="/mentions-legales/">Mentions légales</a></p>
-                    <p><a  href="/redaction/">La rédaction</a></p>
+                    <p><a  href="/auteurs/">La rédaction</a></p>
                 </div>
             </div>
 
@@ -32,8 +36,13 @@
 
         <div class="row footer-bottom">
             <div class="col-sm-7 footer-copyright">
+                {{ if .Site.Params.copyright }}
                 <p>© <a href=
-                "http://www.Younicorns.xyz">Younicorns.xyz</a> - 2015</p>
+                "{{.Site.BaseURL}}">{{.Site.Params.copyright}}</a> - 2015</p>
+                {{ else }}
+                <p>© <a href=
+                "{{.Site.BaseURL}}">{{.Site.Title}}</a> - 2015</p>
+                {{ end }}
             </div>
 
             <div class="col-sm-5">
@@ -45,18 +54,21 @@
                         "font-style: italic" target="_blank"></a>
                     </li>
                     {{ end}}
-
+                    {{ if .Site.Params.twitterPage }}
                     <li>
                         <a class="twitter fa fa-twitter" href=
-                        "https://twitter.com/younicornsXYZ" style=
+                        "{{.Site.Params.twitterPage}}" style=
                         "font-style: italic" target="_blank"></a>
                     </li>
+                    {{ end}}
 
+                    {{ if .Site.Params.googlePage }}
                     <li>
                         <a class="google-plus fa fa-google-plus" href=
-                        "https://plus.google.com/+younicornsXYZ" style=
+                        "{{.Site.Params.googlePage}}" style=
                         "font-style: italic" target="_blank"></a>
                     </li>
+                    {{ end}}
 
                    
                 </ul>
