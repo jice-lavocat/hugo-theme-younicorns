@@ -3,9 +3,12 @@
 <script src="{{ .Site.BaseURL }}/js/modernizr.js"></script>
 <script src="{{ .Site.BaseURL }}/js/app.js"></script>
 
+
+<!-- Disqus -->
+{{ if .Site.DisqusShortname}}
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'younicornsxyz';
+    var disqus_shortname = '{{.Site.DisqusShortname}}';
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function () {
@@ -15,6 +18,10 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
+{{ end }}
+<!-- /Disqus -->
+
+
 
 <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -27,6 +34,7 @@
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+<!-- Facebook -->
 <script>(function() {
   var _fbq = window._fbq || (window._fbq = []);
   if (!_fbq.loaded) {
@@ -43,8 +51,12 @@ window._fbq = window._fbq || [];
 window._fbq.push(['track', 'PixelInitialized', {}]);
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=850436111685843&amp;ev=PixelInitialized" /></noscript>
+<!-- /Facebook -->
 
+
+<!-- Mailchimp -->
 <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<!-- /Mailchimp -->
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
@@ -55,20 +67,4 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                 "https://secure." : "http://www.");
                 //document.write("<sc"+"ript type='text/javascript' src='" +scJsHost+"statcounter.com/counter/counter.js'></"+"script>");
                 </script>
-<script src="http://www.statcounter.com/counter/counter.js">
-
-<noscript><div class="statcounter"><img
-        class="statcounter"
-        src="http://c.statcounter.com/10272588/0/cf03df33/0/"
-        alt="free hit counter" height="1" width="1"></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-    <!-- Premier essai injection stat counter
-<script>
-    $(document).ready(function() {
-       $code_statcounter = "<sc"+"ript type='text/javascript' src='" +scJsHost+"statcounter.com/counter/counter.js'></"+"script>";
-       $('#nombres_chien_calmes').html($code_statcounter);
-    });
-</script>
-        -->
 
