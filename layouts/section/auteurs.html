@@ -9,13 +9,13 @@
 			<section class="content">
 				<div class="container">
 
-					<p class="heading">Younicorns.xyz > Les auteurs</p>
+					<p class="heading">{{.Site.Title}} > Les auteurs</p>
 					
 					<div class="row">
 
 	            		<div class="col-md-8 col-lg-8">
 							 
-							<h1>Les auteurs de Younicorns.xyz</h1>
+							<h1>Les auteurs de {{.Site.Title}}</h1>
 
 						{{ range .Paginator.Pages }}
 						    <article class="post">
