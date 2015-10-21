@@ -8,7 +8,7 @@
                     {{ if .Site.Params.descriptionFooter }}
                     <p>{{.Site.Params.descriptionFooter}}</p>
                     {{ else }}
-                    <p>YounicornsXYZ est un site d'actualités sur le milieu des startups. Nous essayons de vous fournir une information neutre et instantanée.</p>
+                    <p>&nbsp;</p>
                     {{ end }}
 
                     <p><a  href="/mentions-legales/">Mentions légales</a></p>
@@ -22,14 +22,15 @@
                 <h4>Contact</h4>
 
                 <div class="footer-box-text">
-                    <p><span class="gray-text">Adresse:</span> @Numa : 39 rue du Caire, 75002 Paris, FRANCE</p>
+                    {{ if .Site.Params.address }}<p><span class="gray-text">Adresse :</span> {{.Site.Params.address}}</p>{{ end }}
 
-                    <p><span class="gray-text">Phone:</span> +336 46 37 49 26</p>
+                    {{ if .Site.Params.phone }}<p><span class="gray-text">Phone :</span> {{.Site.Params.phone}}</p>{{ end }}
 
-                    <p><span class="gray-text">Twitter:</span> <a href="https://www.twitter.com/younicornsXYZ" target="_blank">@younicornsXYZ</a></p>
+                    {{if .Site.Params.twitterHandle}}
+                    <p><span class="gray-text">Twitter :</span> <a href="https://www.twitter.com/{{.Site.Params.twitterHandle}}" target="_blank">@{{.Site.Params.twitterHandle}}</a></p>{{ end }}
 
-                    <p><span class="gray-text">Email:</span> <a href=
-                    "">contact@younicorns.xyz</a></p>
+                    {{if .Site.Params.contactEmail}}<p><span class="gray-text">Email :</span> <a href=
+                    "mailto:{{.Site.Params.contactEmail}}">{{.Site.Params.contactEmail}}</a></p>{{ end }}
                 </div>
             </div>
         </div>
