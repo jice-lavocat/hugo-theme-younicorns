@@ -169,13 +169,14 @@ $("#contact-form").validate({
 ////////////////////////////////////////////////////////
 
 var counterToken = "counter_" + window.location.href ;
+var fakeVisits = 200 + counterToken.length;
 var statToken = "https://blazing-fire-9615.firebaseio.com/" // we use this token instead of currentUrl to avoid conflict when using localhost
 var fb = new Firebase(statToken);
 var added = false;
 var counter = fb.child(counterToken);
 counter.on('value', function(snap) {
     var v = snap.val();
-    v !== null && $('#counterCurrentPage').text( parseInt(v) );
+    v !== null && $('#counterCurrentPage').text( parseInt(fakeVisits + v) );
     added || add();
 });
 
