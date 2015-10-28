@@ -169,11 +169,7 @@ $("#contact-form").validate({
 ////////////////////////////////////////////////////////
 
 var counterToken = "counter_" + window.location.href ;
-counterToken = counterToken.replace(".", ""); // remove bad characters for firebase child
-counterToken = counterToken.replace("#", "");
-counterToken = counterToken.replace("$", "");
-counterToken = counterToken.replace("[", "");
-counterToken = counterToken.replace("]", "");
+counterToken = counterToken.replace(/[^\w\s]/gi, ''); // remove bad characters for firebase child
 var fakeVisits = 200 + counterToken.length;
 var statToken = "https://blazing-fire-9615.firebaseio.com/" // we use this token instead of currentUrl to avoid conflict when using localhost
 var fb = new Firebase(statToken);
