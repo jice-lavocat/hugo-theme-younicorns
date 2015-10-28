@@ -168,22 +168,20 @@ $("#contact-form").validate({
 ///////////////counter w/ firebase ///////////////////////////
 ////////////////////////////////////////////////////////
 
-var currentUrl = window.location.href ;
+var counterToken = "counter_" + window.location.href ;
 var statToken = "https://blazing-fire-9615.firebaseio.com/" // we use this token instead of currentUrl to avoid conflict when using localhost
 var fb = new Firebase(statToken);
 var added = false;
-
-fb.on('value', function(snap) {
+var counter = fb.child(counterToken);
+counter.on('value', function(snap) {
     var v = snap.val();
-    console.log("Firebase was received : ");
-    console.log(snap);
     v !== null && $('#counterCurrentPage').text( parseInt(v) );
     added || add();
 });
 
 function add() {
    added = true;
-   fb.transaction(function(currentVal) {
+   counter.transaction(function(currentVal) {
       isFinite(currentVal) ||  (currentVal = 0);
       return currentVal+1;
    });     
