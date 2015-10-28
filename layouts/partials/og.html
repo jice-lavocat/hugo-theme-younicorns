@@ -3,6 +3,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if .Params.thumbnail }}
+{{ if .Params.teaserimage }}
+<meta property="og:image" content="{{.Site.BaseURL}}{{ .Params.teaserimage }}" />
+{{ else if .Params.thumbnail }}
 <meta property="og:image" content="{{.Site.BaseURL}}{{ .Params.thumbnail }}" />
 {{ end }}
