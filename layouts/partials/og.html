@@ -8,5 +8,7 @@
 {{ else if .Params.thumbnail }}
 <meta property="og:image" content="{{.Site.BaseURL}}{{ .Params.thumbnail }}" />
 {{ end }}
-<meta property="fb:admins" content="1224742967"/>
-<meta property="fb:admins" content="588298004"/>
+
+{{ if .Site.Params.facebookAppID }}
+<meta property="fb:app_id" content="{{.Site.Params.facebookAppID}}" />
+{{ end }}
