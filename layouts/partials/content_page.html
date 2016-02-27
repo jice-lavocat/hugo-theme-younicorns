@@ -26,24 +26,13 @@
 {{ if .Params.collection }}
     <div id="recent-posts-3" class="sidebar-widget  widget_recent_entries"><h3 class="sidebar-header">Articles associés</h3>
         {{ range $key, $value := .Site.Taxonomies.categories }}
-        {{ if eq $key $collection }}
-        <ul>
-            {{ range $value.Pages }}
-            <li class="clearfix">
-                <div class="post-icon"  style="background: #fff;">
-                    <a href="{{.Permalink}}" title="{{ .Title }}"><img style="width:100%;" src="{{ .Params.thumbnail }}" alt="{{ .Description }}"></a>
-                </div>
-                <a href="{{.Permalink}}" title="{{ .Title }}">{{ .Title }}</a>
-                <small class="post-date">
-                    <script>
-                                document.write(moment({{ .Date }}).locale('fr').format('Do MMMM YYYY'));
-                            </script>
-                </small>
-            </li>
+            {{ if eq $key $collection }}
+                {{ range $value.Pages }}
+                    {{ .Render "summary"}}
+                {{ end }}
             {{ end }}
-        </ul>
         {{ end }}
-        {{ end }}
+
     </div>
 {{ end }}
 
