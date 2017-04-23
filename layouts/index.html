@@ -1,17 +1,18 @@
 ﻿{{ partial "header.html" . }}
 <body>
 	{{ partial "headingbar.html" . }}
-	
+
 	<!-- Menu -->
     {{ partial "menu.html" .}} <!--',  {current_page:@document.URL}) %>-->
-	
+
 	<section class="innercontent">
 		<!-- Content -->
 		<div class="container">
 			<!-- Content -->
 			<section id="content" class="section swatch-white" class="content">
 				<div class="row element-normal-top element-normal-bottom">
-					<div class="col-md-9">{{ range .Data.Pages }}
+					<div class="col-md-9">{{.Content}}
+					{{ range .Data.Pages }}
 							{{if eq .RelPermalink "/" }} {{.Content}} {{end}}
 					{{ end }}</div>
 					<div class="col-md-3 sidebar">{{ partial "sidebar.html" .}}</div>
@@ -20,7 +21,7 @@
 			</section>
 		</div><!-- /container -->
 	</section>
-	
+
 		<!-- Footer -->
         {{ partial "footer.html" .}}
 	{{ partial "modals.html" . }}
