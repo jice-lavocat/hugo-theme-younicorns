@@ -9,7 +9,7 @@ jQuery(function($) {
 			$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 			$('body').delay(350).css({'overflow':'visible'});
 	});
-	  
+
 ////////////////////////////////////////////////////////
 ///////////////dropdown hover//////////////
 ////////////////////////////////////////////////////////
@@ -48,13 +48,13 @@ $('div.bgParallax').each(function(){
 	var $obj = $(this);
 
 	$(window).scroll(function() {
-		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+		var yPos = -($(window).scrollTop() / $obj.data('speed'));
 
 		var bgpos = '50% '+ yPos + 'px';
 
 		$obj.css('background-position', bgpos );
- 
-	}); 
+
+	});
 });
 ////////////////////////////////////////////////////////
 ///////////////gallery owl-carousel ///////////////////////////
@@ -67,9 +67,9 @@ $('div.bgParallax').each(function(){
 	  navigation : true,
 	  lazyLoad : true
   });
- 
+
   jQuery("#sponsor-carousel").owlCarousel({
- 
+
     autoPlay: 3000, //Set AutoPlay to 3 seconds
  	pagination: false,
     items : 3,
@@ -106,7 +106,7 @@ $("#comment-form").validate({
                 minlength: 2,
                 required: true
             },
-			
+
 			message:{
                 minlength: 3,
                 maxlength: 300,
@@ -114,7 +114,7 @@ $("#comment-form").validate({
             }
          },
 	});
-	 
+
 $("#contact-form").validate({
          ignore: ":hidden",
          rules: {
@@ -127,7 +127,7 @@ $("#contact-form").validate({
                 minlength: 2,
                 required: true
             },
-			
+
 			message:{
                 minlength: 3,
                 maxlength: 300,
@@ -186,5 +186,5 @@ function add() {
    counter.transaction(function(currentVal) {
       isFinite(currentVal) ||  (currentVal = 0);
       return currentVal+1;
-   });     
+   });
 }
