@@ -46,7 +46,7 @@
 
         <!--<li class="dropdown mega-dropdown">
 
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources<span class="caret"></span></a>               
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ressources<span class="caret"></span></a>
 
                 <div class="dropdown-menu">
 
@@ -110,9 +110,9 @@
 
                     </div>
 
-                    </div>   
+                    </div>
 
-                </div>              
+                </div>
 
             </li>
         -->
@@ -175,7 +175,7 @@
 
 
 
-                    </div>   
+                    </div>
 
                 </div>
 
@@ -199,10 +199,16 @@
         </li>
         {{ end }}
 
+        {{ if .Site.Params.instagram }}
+        <li>
+          <a href="{{.Site.Params.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
+        </li>
+        {{ end }}
+
 
       </ul>
 
-    <!--/.nav-collapse --> 
+    <!--/.nav-collapse -->
 
   </div>
 
