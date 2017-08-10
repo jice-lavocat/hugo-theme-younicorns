@@ -84,8 +84,8 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
       source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
       displayKey: 'title',
       templates: {
-        suggestion: function(suggestion) {
-          return '<a href="'+suggestion.objectID+'"><img width="40" height="40" src="' +
+        suggestion: function(suggestion, extradata) {
+          return '<a href="'+suggestion.objectID+'?search='+extradata.query+'"><img width="40" height="40" src="' +
             suggestion._highlightResult.thumbnail.value + '"><span>' +
             suggestion._highlightResult.title.value + '</span></a>';
         }
