@@ -5,6 +5,10 @@
 <script src="{{ .Site.BaseURL }}/js/app.js"></script>
 
 
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+
 <!-- Disqus -->
 {{ if .Site.DisqusShortname}}
 <script type="text/javascript">
@@ -69,3 +73,25 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                 //document.write("<sc"+"ript type='text/javascript' src='" +scJsHost+"statcounter.com/counter/counter.js'></"+"script>");
                 </script>
 
+
+
+<!-- Search -->
+<script>
+  var client = algoliasearch("AR1LZLFH32", "6e5b77adf24a1de49b6d55838ed6fee7");
+  var index = client.initIndex('blog_posts');
+  $('#search_dropdown').autocomplete({ hint: false }, [
+    {
+      source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+      displayKey: 'title',
+      templates: {
+        suggestion: function(suggestion) {
+          return '<a href="'+suggestion.objectID+'"><img width="40" height="40" src="' +
+            suggestion._highlightResult.thumbnail.value + '"><span>' +
+            suggestion._highlightResult.title.value + '</span></a>';
+        }
+      }
+    }
+  ]).on('autocomplete:selected', function(event, suggestion, dataset) {
+    console.log(suggestion, dataset);
+  });
+</script>
