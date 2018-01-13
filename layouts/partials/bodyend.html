@@ -1,6 +1,7 @@
 <script src="{{ .Site.BaseURL }}/js/jquery-1.11.2.min.js"></script>
 <script src="{{ .Site.BaseURL }}/js/bootstrap.3.3.4.min.js"></script>
 <script src="{{ .Site.BaseURL }}/js/modernizr.js"></script>
+<script src="{{ .Site.BaseURL }}/js/headroom.min.js"></script>
 <script src="{{ .Site.BaseURL }}/js/firebase.js"></script>
 <script src="{{ .Site.BaseURL }}/js/app.js"></script>
 
@@ -76,4 +77,22 @@
   ]).on('autocomplete:selected', function(event, suggestion, dataset) {
     console.log(suggestion, dataset);
   });
+</script>
+
+<script type="text/javascript">
+  // Headroom - Display related articles
+  var myElement = document.querySelector("header");
+  // construct an instance of Headroom, passing the element
+  var headroom  = new Headroom(myElement, {
+    "offset": 405,
+    "tolerance": 10,
+    "classes": {
+      "initial": "animated",
+      "pinned": "bounceInUp",
+      "unpinned": "bounceOutDown"
+    },
+    onPin : function() {$(".header").css("display", "block");},
+  });
+  // initialise
+  headroom.init();
 </script>
