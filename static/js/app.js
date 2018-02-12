@@ -59,28 +59,28 @@ $('div.bgParallax').each(function(){
 ////////////////////////////////////////////////////////
 ///////////////gallery owl-carousel ///////////////////////////
 ////////////////////////////////////////////////////////
-  $("#feature-posts-grid").owlCarousel({
-      items : 5,
-      itemsDesktop : [1366,4],
-      itemsDesktopSmall : [1024,3],
-      pagination : false,
-	  navigation : true,
-	  lazyLoad : true
-  });
+  // $("#feature-posts-grid").owlCarousel({
+  //     items : 5,
+  //     itemsDesktop : [1366,4],
+  //     itemsDesktopSmall : [1024,3],
+  //     pagination : false,
+	 //  navigation : true,
+	 //  lazyLoad : true
+  // });
 
-  jQuery("#sponsor-carousel").owlCarousel({
+  // jQuery("#sponsor-carousel").owlCarousel({
 
-    autoPlay: 3000, //Set AutoPlay to 3 seconds
- 	pagination: false,
-    items : 3,
-    itemsDesktop : [1199,4],
-    itemsDesktopSmall : [979,3],
- 	navigation: true,
-	  navigationText: [
-      "<i class='fa fa-angle-left'></i>",
-      "<i class='fa fa-angle-right'></i>"
-      ]
-  });
+  //   autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 	// pagination: false,
+  //   items : 3,
+  //   itemsDesktop : [1199,4],
+  //   itemsDesktopSmall : [979,3],
+ 	// navigation: true,
+	 //  navigationText: [
+  //     "<i class='fa fa-angle-left'></i>",
+  //     "<i class='fa fa-angle-right'></i>"
+  //     ]
+  // });
 
 ////////////////////////////////////////////////////////
 ///////////////masonry ///////////////////////////

@@ -1,5 +1,5 @@
 /*************** labels of css section ***************
-*************** BlogDesk blog theme 1.0v 
+*************** BlogDesk blog theme 1.0v
 default settings
 theme btns
 preloader
@@ -20,10 +20,8 @@ contact
 footer
 media responsive
 ********************/
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
-@import url('../plugins/font-awesome/css/font-awesome.min.css');
-@import url('../plugins/owl-carousel/owl.carousel.css');
-@import url('../plugins/owl-carousel/owl.theme.css');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+@import url('vendor/font-awesome.min.css');
 /***************default settings********************/
 body { font-family: 'Roboto', sans-serif; background: #f4f4f4; padding-top: 60px;}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', sans-serif; }
@@ -139,7 +137,7 @@ padding-top: 0px;}
 .navbar-default .navbar-nav .mega-dropdown-menu .sub-menu li a i{font-size: 20px;}
 .navbar-default .navbar-nav .mega-dropdown-menu .sub-menu li a:hover{ color: #e74c3c; text-decoration: none;}
 .navbar-default .navbar-nav .mega-dropdown-menu .sub-menu .store-icon li{ text-align: center; padding: 0px 15px;}
-.navbar-default .navbar-nav .mega-dropdown-menu .sub-menu .store-icon li a{ font-size: 18px; font-weight: 500;} 
+.navbar-default .navbar-nav .mega-dropdown-menu .sub-menu .store-icon li a{ font-size: 18px; font-weight: 500;}
 .navbar-default .navbar-nav .mega-dropdown-menu .sub-menu .store-icon li a i{font-size: 42px; display: block;color: #e74c3c;}
 .navbar-default .social-icons li a{ font-size: 18px; padding:20px 10px;  }
 
@@ -182,7 +180,7 @@ padding: 20px; position: absolute; bottom: 0px; left: 0px; text-align:left;backg
 .feature-posts-grid .feature-text h3{ margin: 0px 0px 10px 0px;}
 .feature-posts-grid .feature-text a { overflow: hidden;
   clear: left;
-  
+
   text-overflow: ellipsis;
   white-space: nowrap; display: block; font-size:24px; font-weight: 500; color:#fff; }
 .feature-posts-grid .feature-text a:hover { color:#e74c3c; }
@@ -211,7 +209,7 @@ margin: 0px; background: transparent; font-size: 50px; display: block;}
   filter: alpha(opacity=90);
   outline: 0;
   opacity: .9;
-}  
+}
 #feature-posts-2{ padding: 15px 0px 0px 0px; }
 #feature-posts-2 .thumbnail { border-radius:0px;margin: 0px; border:none; padding:0px; height:280px; overflow:hidden; }
 #feature-posts-2 .thumbnail img {-webkit-transition: -webkit-transform 0.35s;transition: transform 0.35s;-webkit-transform: scale(1);transform: scale(1);min-height:280px; height:auto; width:100%; border:none; border-radius:0px; padding:0px;  }
@@ -620,10 +618,10 @@ a.blogger { color: #f39d38; }
         margin: 15px 0;
     }
     /* since 3.1.0 */
-    .navbar-collapse.collapse.in { 
+    .navbar-collapse.collapse.in {
         display: block!important;
         overflow-y: auto;
-          
+
     }
     .collapsing {
         overflow: hidden!important;
@@ -645,8 +643,8 @@ a.blogger { color: #f39d38; }
 
 .navbar-default .navbar-nav .mega-dropdown.search .container{ width: auto;}
 .post .author-info ul li {
-   padding-left: 20px; 
-   padding-right: 20px; 
+   padding-left: 20px;
+   padding-right: 20px;
 }
 }
 @media (max-width: 640px) {
@@ -659,7 +657,7 @@ a.blogger { color: #f39d38; }
   left: auto;
 }
 .navbar-default .navbar-nav .mega-dropdown .container {
-  
+
 }
 .navbar-default .navbar-nav .mega-dropdown-menu .tab-content {
   width: 100%;
@@ -715,7 +713,7 @@ a.blogger { color: #f39d38; }
   padding-left:0px;
 }
 .navbar-default .navbar-nav .mega-dropdown-menu {
-  
+
 }
 .share-this{padding: 20px 15px;}
 .related-post{padding: 20px 15px;}
@@ -739,7 +737,7 @@ a.blogger { color: #f39d38; }
   padding-right: 0px;
 }
 .navbar-default .navbar-nav > li > a {
- 
+
   padding: 20px 5px;
 }
 .navbar-brand img {

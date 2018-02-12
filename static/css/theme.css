@@ -45,7 +45,7 @@ text-align: center;
 font-weight: 200;
 }
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,600,700,900&subset=latin);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,600,700,900&subset=latin);
 body {
     font-family: Source Sans Pro
 }h1, h2, h3, h4, h5, h6 {
