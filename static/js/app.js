@@ -91,77 +91,7 @@ $('div.bgParallax').each(function(){
 	// 	// columnWidth: 152
 	// });
 
-////////////////////////////////////////////////////////
-///////////////contact form ///////////////////////////
-////////////////////////////////////////////////////////
-$("#comment-form").validate({
-         ignore: ":hidden",
-         rules: {
-             name:{
-                minlength: 2,
-                maxlength: 30,
-                required: true
-            },
-            email:{
-                minlength: 2,
-                required: true
-            },
 
-			message:{
-                minlength: 3,
-                maxlength: 300,
-                required: true
-            }
-         },
-	});
-
-$("#contact-form").validate({
-         ignore: ":hidden",
-         rules: {
-             yourname:{
-                minlength: 2,
-                maxlength: 30,
-                required: true
-            },
-            email:{
-                minlength: 2,
-                required: true
-            },
-
-			message:{
-                minlength: 3,
-                maxlength: 300,
-                required: true
-            }
-         },
-		 submitHandler: function (form) {
-             $.ajax({
-                 type: "POST",
-                 url: "sendemail.php",
-                 data: $("#contact-form").serialize(),
-					error:function(){
-						//alert('asdasdasd');
-						console.log('Some thing went wrong! :D');
-						},
-                 		success:function(data) {
-						//alert(data);
-						if(data=='fail'){
-							$('#errormessage').html("<label for='captcha_code' class='error'>Security Code was incorrect.</label>");
-						}else{
-							$('.reg-form').html("<div id='message'></div>");
-							 $('#message').html("<h2> Thanks for Submitting your Message!</h2>")
-								 .hide()
-								 .fadeIn(1500, function (data) {
-								 $('#message').append("");
-							 });
-						}
-                 }
-             });
-             return false; // required to block normal submit since you used ajax
-         }
-     });
-/// end js
-});
 
 
 ////////////////////////////////////////////////////////
