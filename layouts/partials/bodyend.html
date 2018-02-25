@@ -81,11 +81,15 @@
 
 <script type="text/javascript">
   // Headroom - Display related articles
+  // http://wicky.nillia.ms/headroom.js/
   var myElement = document.querySelector("header");
   // construct an instance of Headroom, passing the element
   var headroom  = new Headroom(myElement, {
     "offset": 405,
-    "tolerance": 10,
+    "tolerance" : {
+        "up" : 10,
+        "down" : 0
+    },
     "classes": {
       "initial": "animated",
       "pinned": "bounceInUp",
@@ -93,6 +97,8 @@
     },
     onPin : function() {$(".header").css("display", "block");},
   });
-  // initialise
-  headroom.init();
+  // initialise on all page except some
+    if(window.location.href.indexOf("mutuelle")== -1) {
+      headroom.init();
+    }
 </script>
