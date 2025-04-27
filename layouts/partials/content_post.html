@@ -15,7 +15,7 @@
 
 <div class="author-info">
     <ul class="list-inline">
-        {{ range where .Site.Pages "Section" "auteurs"}}
+        {{ range where .Site.RegularPages "Section" "auteurs"}}
             {{ if eq $author .Params.author }}
                 <li class="author">
                     {{ .Render "summary"}}

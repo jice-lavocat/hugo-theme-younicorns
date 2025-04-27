@@ -27,7 +27,7 @@
 
 	            	<h2>Ses articles </h2>
 	            	<article class="post">
-					{{ range where .Site.Pages "Section" "actualites"}}
+					{{ range where .Site.RegularPages "Section" "actualites"}}
 					    {{ if eq $author .Params.author }}
 					            {{ .Render "summary"}}
 					    {{ end }}

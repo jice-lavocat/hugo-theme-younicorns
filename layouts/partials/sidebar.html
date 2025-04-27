@@ -17,7 +17,7 @@
       </div>
 
       <div class="panel-body nopadding">
-      	{{ range first 5 (where .Site.Pages "Section" "actualites")}}
+      	{{ range first 5 (where .Site.RegularPages "Section" "actualites")}}
         <div class="media">
           <div class="media-left">
             <a href="#"><img alt="{{ .Title }}" src="{{ .Params.thumbnail }}"></a>
