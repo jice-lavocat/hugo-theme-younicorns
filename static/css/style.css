@@ -94,7 +94,7 @@ section p.heading , section h2.heading { font-size:30px; color:#3b4952; font-fam
 section h3.helping-text { font-size:20px; color:#454545; font-weight:300; margin:0px 0px 30px 0px; line-height:36px; }
 section p { font-size:18px; color:#454545; }
 section { padding:0px 0px; }
-.md-heading{ font-size: 24px !important; line-height: 36px !important; margin-bottom: 15px !important; }
+.md-heading{ font-size: 24px !important; line-height: 36px !important; margin-bottom: 15px !important; margin-right: 10px;}
 .heading-line {font-size: 24px;position: relative;font-weight: 400;margin: 0px 0px 22px 0px;padding-bottom: 22px;}
 .heading-line:before {position: absolute;left: 0px;bottom: 0px;background-color: #e74c3c;content: "";display: inline-block;height: 2px;margin-top: 0px;vertical-align: middle;width: 115px;}
 /***************navbar********************/
@@ -166,6 +166,18 @@ padding-top: 0px;}
 .tabs-right > .nav-tabs > li > a {margin-left: -1px;-webkit-border-radius: 0 4px 4px 0;-moz-border-radius: 0 4px 4px 0;          border-radius: 0 4px 4px 0;}
 .tabs-right > .nav-tabs > li > a:hover,.tabs-right > .nav-tabs > li > a:focus {border-color: #eeeeee #eeeeee #eeeeee #dddddd;}
 .tabs-right > .nav-tabs .active > a,.tabs-right > .nav-tabs .active > a:hover,.tabs-right > .nav-tabs .active > a:focus {  border-color: #ddd #ddd #ddd transparent;  *border-left-color: #ffffff;}
+/***************Docs********************/
+.bs-callout-info {
+  border-left-color: #1b809e;
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
 /***************feature-posts********************/
 #feature-posts{ }
 .owl-carousel .owl-item{ border-bottom: none; border-top: none; border-left: 1px solid #fff; border-right: 1px solid #fff;}
@@ -375,7 +387,7 @@ a.list-group-item { color: #49545b; padding:15px 25px; border-color: #eef3f6; fo
 .masonry-container .masonry-item{ width: 390px; padding:0px 15px;}
 
 /******************section clients**********************/
-.sponsor{float: left; width: 100%; padding:30px 0px 40px 0px; background: #fff; border-top: 1px solid #ddd;}
+.sponsor{float: left; width: 100%; padding:30px 0px 40px 0px; background: #fff; border-bottom: 1px solid #ddd; margin-bottom: 40px;}
 #sponsor-carousel{ margin-top: 50px;}
 #sponsor-carousel.owl-theme .owl-controls .owl-buttons div{padding: 0px;height: 40px;opacity: 1; background: transparent; font-size: 50px;}
 #sponsor-carousel.owl-theme .owl-controls .owl-buttons .owl-prev{top: 0px; left: 0%;}
